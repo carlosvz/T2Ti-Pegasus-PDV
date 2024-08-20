@@ -86,9 +86,9 @@ class ProdutoSubgrupoDao extends DatabaseAccessor<AppDatabase> with _$ProdutoSub
       if (coluna is TextColumn) {
         consulta.where((coluna as TextColumn).like('%$valor%'));
       } else if (coluna is IntColumn) {
-        consulta.where(coluna.equals(int.tryParse(valor)));
+        consulta.where(coluna.equals(int.tryParse(valor)!));
       } else if (coluna is RealColumn) {
-        consulta.where(coluna.equals(double.tryParse(valor)));
+        consulta.where(coluna.equals(double.tryParse(valor)!));
       }
     }
 

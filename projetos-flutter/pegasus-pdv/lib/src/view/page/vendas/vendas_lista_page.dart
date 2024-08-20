@@ -448,7 +448,7 @@ class VendasListaPageState extends State<VendasListaPage> {
   Future _refrescarTela() async {
     _listaPdvVendaCabecalho = await Sessao.db.pdvVendaCabecalhoDao.consultarVendasPorPeriodoEStatus(
       mes: Biblioteca.formatarMes(_mesAno), 
-      ano: _mesAno.year, 
+      ano: _mesAno!.year, 
       status: _statusVenda
     );
     _atualizarTotais();

@@ -291,7 +291,7 @@ class ClienteFiadoListaPageState extends State<ClienteFiadoListaPage> {
   }  
 
   Future _refrescarTela() async {
-    _listaClienteFiadoMontado = await Sessao.db.clienteFiadoDao.consultarListaMontado(mes: _mesAno.month, ano: _mesAno.year, status: _statusPagamento!, idCliente: widget.cliente.id!);
+    _listaClienteFiadoMontado = await Sessao.db.clienteFiadoDao.consultarListaMontado(mes: _mesAno!.month, ano: _mesAno!.year, status: _statusPagamento!, idCliente: widget.cliente.id!);
     _atualizarTotais();
     setState(() {
     });

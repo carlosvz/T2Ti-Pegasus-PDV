@@ -33,7 +33,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 @author Albert Eije (alberteije@gmail.com)                    
 @version 1.0.0
 *******************************************************************************/
-import 'package:catcher/catcher.dart';
+import 'package:catcher_2/catcher_2.dart';
 import 'package:flutter/material.dart' hide Key;
 import 'package:flutter/foundation.dart' hide Key;
 import 'package:intl/intl.dart';
@@ -254,7 +254,7 @@ class Constantes {
 
 // #region Catcher
   ///configuração para tratar erros em modo de debug (desenvolvimento)
-  static CatcherOptions debugOptionsDialogo = CatcherOptions(
+  static Catcher2Options debugOptionsDialogo = Catcher2Options(
     DialogReportMode(),
     [
       SentryHandler(
@@ -269,7 +269,7 @@ class Constantes {
   );
 
   ///configuração para tratar erros em modo de release (produção)
-  static CatcherOptions releaseOptionsDialogo = CatcherOptions(
+  static Catcher2Options releaseOptionsDialogo = Catcher2Options(
     DialogReportMode(),
     [
       SentryHandler(
@@ -285,7 +285,7 @@ class Constantes {
 
 
   ///configuração para tratar erros em modo de debug (desenvolvimento) - modo silencioso
-  static CatcherOptions debugOptionsSilencioso = CatcherOptions(
+  static Catcher2Options debugOptionsSilencioso = Catcher2Options(
     SilentReportMode(),
     [
       SentryHandler(
@@ -300,7 +300,7 @@ class Constantes {
   );
 
   ///configuração para tratar erros em modo de release (produção) - modo silencioso
-  static CatcherOptions releaseOptionsSilencioso = CatcherOptions(
+  static Catcher2Options releaseOptionsSilencioso = Catcher2Options(
     DialogReportMode(),
     [
       SentryHandler(
@@ -315,7 +315,7 @@ class Constantes {
   );
 
   ///configuração para tratar erros em modo de debug (desenvolvimento) - modo página
-  static CatcherOptions debugOptionsPagina = CatcherOptions(
+  static Catcher2Options debugOptionsPagina = Catcher2Options(
     PageReportMode(),
     [
       SentryHandler(
@@ -330,7 +330,7 @@ class Constantes {
   );
 
   ///configuração para tratar erros em modo de release (produção) - modo página
-  static CatcherOptions releaseOptionsPagina = CatcherOptions(
+  static Catcher2Options releaseOptionsPagina = Catcher2Options(
     ///Vai mostrar o erro numa página
     PageReportMode(),
     ///Vai mostrar o erro numa página

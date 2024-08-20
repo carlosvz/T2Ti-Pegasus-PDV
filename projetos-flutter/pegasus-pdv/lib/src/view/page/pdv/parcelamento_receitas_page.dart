@@ -277,18 +277,16 @@ class ParcelamentoReceitasPageState extends State<ParcelamentoReceitasPage> {
                                                           ),
                                                           fullscreenDialog: true,
                                                         ));
-                                                    if (objetoJsonRetorno != null) {
-                                                      if (objetoJsonRetorno['nome'] != null) {
-                                                        _importaClienteController.text = objetoJsonRetorno['nome'];
-                                                        Sessao.vendaAtual = 
-                                                        Sessao.vendaAtual!.copyWith(
-                                                          idCliente: objetoJsonRetorno['id'],
-                                                          nomeCliente: objetoJsonRetorno['nome'],
-                                                          cpfCnpjCliente: objetoJsonRetorno['cpfCnpj'],
-                                                        );
-                                                      }
+                                                    if (objetoJsonRetorno['nome'] != null) {
+                                                      _importaClienteController.text = objetoJsonRetorno['nome'];
+                                                      Sessao.vendaAtual = 
+                                                      Sessao.vendaAtual!.copyWith(
+                                                        idCliente: objetoJsonRetorno['id'],
+                                                        nomeCliente: objetoJsonRetorno['nome'],
+                                                        cpfCnpjCliente: objetoJsonRetorno['cpfCnpj'],
+                                                      );
                                                     }
-                                                  },
+                                                                                                    },
                                                 ),
                                               ),
                                             ],
@@ -605,7 +603,7 @@ class ParcelamentoReceitasPageState extends State<ParcelamentoReceitasPage> {
 
       // se tiver dia fixo, calcula as parcelas levando em conta apenas o mes
       if (diaVencimentoFixo) {
-        dataPrimeiroVencimento = DateTime.utc(_diaPrimeiroVencimento.year, _diaPrimeiroVencimento.month, diaFixoParcela);        
+        dataPrimeiroVencimento = DateTime.utc(_diaPrimeiroVencimento!.year, _diaPrimeiroVencimento!.month, diaFixoParcela);        
       } 
 
       // gera as parcelas de acordo com critérios informados
@@ -620,7 +618,7 @@ class ParcelamentoReceitasPageState extends State<ParcelamentoReceitasPage> {
             idPdvVendaCabecalho: Sessao.vendaAtual!.id,
             dataLancamento: DateTime.now(),
             dataVencimento: (diaVencimentoFixo) 
-                            ? DateTime.utc(dataPrimeiroVencimento.year, dataPrimeiroVencimento.month + i, dataPrimeiroVencimento.day)
+                            ? DateTime.utc(dataPrimeiroVencimento!.year, dataPrimeiroVencimento!.month + i, dataPrimeiroVencimento.day)
                             : dataPrimeiroVencimento.add(Duration(days: intervaloEntreParcelas * i)),
             valorAReceber: num.parse((widget.totalParcelamento! / quantidadeParcelas).toStringAsFixed(Constantes.decimaisValor)) as double?,
             statusRecebimento: 'A',

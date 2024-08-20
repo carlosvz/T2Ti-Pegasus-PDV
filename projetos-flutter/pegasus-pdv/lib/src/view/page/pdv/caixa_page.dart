@@ -838,12 +838,10 @@ class CaixaPageState extends State<CaixaPage> {
             ),
             fullscreenDialog: true,
           ));
-      if (objetoJsonRetorno != null) {
-        Sessao.vendaAtual = await Sessao.db.pdvVendaCabecalhoDao.consultarObjeto(objetoJsonRetorno['id']);
-        Sessao.listaVendaAtualDetalhe = await Sessao.db.pdvVendaDetalheDao.consultarListaComProduto(objetoJsonRetorno['id']);
-        _imprimirRecibo();
-      }          
-    }
+      Sessao.vendaAtual = await Sessao.db.pdvVendaCabecalhoDao.consultarObjeto(objetoJsonRetorno['id']);
+      Sessao.listaVendaAtualDetalhe = await Sessao.db.pdvVendaDetalheDao.consultarListaComProduto(objetoJsonRetorno['id']);
+      _imprimirRecibo();
+        }
   }
 
   void _recuperarVenda() async {
@@ -863,20 +861,18 @@ class CaixaPageState extends State<CaixaPage> {
             ),
             fullscreenDialog: true,
           ));
-      if (objetoJsonRetorno != null) {
-        Sessao.vendaAtual = await Sessao.db.pdvVendaCabecalhoDao.consultarObjeto(objetoJsonRetorno['id']);
-        Sessao.listaVendaAtualDetalhe = await Sessao.db.pdvVendaDetalheDao.consultarListaComProduto(objetoJsonRetorno['id']);
-        // atualiza data e hora
-        Sessao.vendaAtual = 
-        Sessao.vendaAtual!.copyWith(
-          dataVenda: DateTime.now(),
-          horaVenda: Biblioteca.formatarHora(DateTime.now()),
-        );
-        setState(() {
-          Sessao.statusCaixa = StatusCaixa.vendaEmAndamento;
-        });
-      } 
-      _menuController.close!();         
+      Sessao.vendaAtual = await Sessao.db.pdvVendaCabecalhoDao.consultarObjeto(objetoJsonRetorno['id']);
+      Sessao.listaVendaAtualDetalhe = await Sessao.db.pdvVendaDetalheDao.consultarListaComProduto(objetoJsonRetorno['id']);
+      // atualiza data e hora
+      Sessao.vendaAtual = 
+      Sessao.vendaAtual!.copyWith(
+        dataVenda: DateTime.now(),
+        horaVenda: Biblioteca.formatarHora(DateTime.now()),
+      );
+      setState(() {
+        Sessao.statusCaixa = StatusCaixa.vendaEmAndamento;
+      });
+          _menuController.close!();         
     }
   }
 
@@ -1189,15 +1185,13 @@ class CaixaPageState extends State<CaixaPage> {
             ),
             fullscreenDialog: true,
           ));
-      if (objetoJsonRetorno != null) {
-        setState(() {
-          Sessao.vendaAtual = 
-          Sessao.vendaAtual!.copyWith(
-            idColaborador: objetoJsonRetorno['id'],
-          );
-        });
-      }
-      _fecharMenus();
+      setState(() {
+        Sessao.vendaAtual = 
+        Sessao.vendaAtual!.copyWith(
+          idColaborador: objetoJsonRetorno['id'],
+        );
+      });
+          _fecharMenus();
     } else {
       _exibirMensagemNaoExisteVendaEmAndamento();
     }
@@ -1239,10 +1233,8 @@ class CaixaPageState extends State<CaixaPage> {
           ),
           fullscreenDialog: true,
         ));
-    if (objetoJsonRetorno != null) {
-      _localizarProduto(objetoJsonRetorno['gtin']);
-    }    
-  }  
+    _localizarProduto(objetoJsonRetorno['gtin']);
+    }  
 
   void _filtrarProdutoLookup(String campo, String valor) async {
     var listaFiltrada = await Sessao.db.produtoDao.consultarListaFiltro(campo, valor);

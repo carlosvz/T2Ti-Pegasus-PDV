@@ -33,7 +33,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 @author Albert Eije (alberteije@gmail.com)                    
 @version 1.0.0
 *******************************************************************************/
-import 'package:catcher/catcher.dart';
+import 'package:catcher_2/catcher_2.dart';
 
 import 'package:pegasus_pdv/src/infra/infra.dart';
 import 'package:pegasus_pdv/src/model/model.dart';
@@ -83,7 +83,7 @@ class ServiceBase {
       }
     }
 
-    _url = _endpoint + entidade + stringFiltro!;
+    _url = _endpoint + entidade + stringFiltro;
   }
 
   void tratarFiltroRelatorio(Filtro? filtro, String entidade) {

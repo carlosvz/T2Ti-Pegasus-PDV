@@ -229,16 +229,16 @@ class Biblioteca {
   }
 
   static DateTime converteDataInicioParaFiltro(DateTime data) {
-    return DateTime(data.year, data.month, data.day, 0, 0, 0, 0, 0); // zera o tempo
+    return DateTime(data!.year, data!.month, data.day, 0, 0, 0, 0, 0); // zera o tempo
   }
 
   static DateTime converteDataFimParaFiltro(DateTime data) {
-    return DateTime(data.year, data.month, data.day, 23, 59, 59, 0, 0); // adiciona o tempo
+    return DateTime(data!.year, data!.month, data.day, 23, 59, 59, 0, 0); // adiciona o tempo
   }
 
   static DateTime? removerTempoDaData(DateTime? data) {
     if (data != null) {
-      return DateTime(data.year, data.month, data.day, 0, 0, 0, 0, 0); // zera o tempo
+      return DateTime(data!.year, data!.month, data.day, 0, 0, 0, 0, 0); // zera o tempo
     } else {
       return data;
     }

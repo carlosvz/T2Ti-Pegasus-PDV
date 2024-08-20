@@ -209,16 +209,14 @@ class ProdutoPersistePageState extends State<ProdutoPersistePage> {
                                           ),
                                           fullscreenDialog: true,
                                         ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['sigla'] != null) {
-                                          importaProdutoUnidadeController.text = objetoJsonRetorno['sigla'];
-                                          widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoUnidade: objetoJsonRetorno['id']);
-                                          widget.produtoMontado!.produtoUnidade = widget.produtoMontado!.produtoUnidade!.copyWith(
-                                            sigla: objetoJsonRetorno['sigla'],
-                                          );
-                                        }
+                                      if (objetoJsonRetorno['sigla'] != null) {
+                                        importaProdutoUnidadeController.text = objetoJsonRetorno['sigla'];
+                                        widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoUnidade: objetoJsonRetorno['id']);
+                                        widget.produtoMontado!.produtoUnidade = widget.produtoMontado!.produtoUnidade!.copyWith(
+                                          sigla: objetoJsonRetorno['sigla'],
+                                        );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -275,16 +273,14 @@ class ProdutoPersistePageState extends State<ProdutoPersistePage> {
                                           ),
                                           fullscreenDialog: true,
                                         ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['descricao'] != null) {
-                                          importaProdutoTipoController.text = objetoJsonRetorno['descricao'];
-                                          widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoTipo: objetoJsonRetorno['id']);
-                                          widget.produtoMontado!.produtoTipo = widget.produtoMontado!.produtoTipo!.copyWith(
-                                            descricao: objetoJsonRetorno['descricao'],
-                                          );
-                                        }
+                                      if (objetoJsonRetorno['descricao'] != null) {
+                                        importaProdutoTipoController.text = objetoJsonRetorno['descricao'];
+                                        widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoTipo: objetoJsonRetorno['id']);
+                                        widget.produtoMontado!.produtoTipo = widget.produtoMontado!.produtoTipo!.copyWith(
+                                          descricao: objetoJsonRetorno['descricao'],
+                                        );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -341,16 +337,14 @@ class ProdutoPersistePageState extends State<ProdutoPersistePage> {
                                           ),
                                           fullscreenDialog: true,
                                         ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaProdutoSubgrupoController.text = objetoJsonRetorno['nome'];
-                                          widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoSubgrupo: objetoJsonRetorno['id']);
-                                          widget.produtoMontado!.produtoSubgrupo = widget.produtoMontado!.produtoSubgrupo!.copyWith(
-                                            nome: objetoJsonRetorno['nome'],
-                                          );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaProdutoSubgrupoController.text = objetoJsonRetorno['nome'];
+                                        widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idProdutoSubgrupo: objetoJsonRetorno['id']);
+                                        widget.produtoMontado!.produtoSubgrupo = widget.produtoMontado!.produtoSubgrupo!.copyWith(
+                                          nome: objetoJsonRetorno['nome'],
+                                        );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -412,16 +406,14 @@ class ProdutoPersistePageState extends State<ProdutoPersistePage> {
                                             ),
                                             fullscreenDialog: true,
                                           ));
-                                        if (objetoJsonRetorno != null) {
-                                          if (objetoJsonRetorno['descricao'] != null) {
-                                            importaTributGrupoTributarioController.text = objetoJsonRetorno['descricao'];
-                                            widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idTributGrupoTributario: objetoJsonRetorno['id']);
-                                            widget.produtoMontado!.tributGrupoTributario = widget.produtoMontado!.tributGrupoTributario!.copyWith(
-                                              descricao: objetoJsonRetorno['descricao'],
-                                            );
-                                          }
+                                        if (objetoJsonRetorno['descricao'] != null) {
+                                          importaTributGrupoTributarioController.text = objetoJsonRetorno['descricao'];
+                                          widget.produtoMontado!.produto = widget.produtoMontado!.produto!.copyWith(idTributGrupoTributario: objetoJsonRetorno['id']);
+                                          widget.produtoMontado!.tributGrupoTributario = widget.produtoMontado!.tributGrupoTributario!.copyWith(
+                                            descricao: objetoJsonRetorno['descricao'],
+                                          );
                                         }
-                                      },
+                                                                            },
                                     ),
                                   ),
                                 ],

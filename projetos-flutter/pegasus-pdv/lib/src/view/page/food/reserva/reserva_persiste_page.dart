@@ -214,17 +214,15 @@ class ReservaPersistePageState extends State<ReservaPersistePage> {
                                                 ),
                                                 fullscreenDialog: true,
                                               ));
-                                          if (objetoJsonRetorno != null) {
-                                            if (objetoJsonRetorno['nome'] != null) {
-                                              importaClienteController.text = objetoJsonRetorno['nome'];
-                                              contatoController.text = objetoJsonRetorno['nome'];
-                                              _reserva = _reserva!.copyWith(idCliente: objetoJsonRetorno['id']);
-                                              widget.reservaMontado!.cliente = widget.reservaMontado!.cliente!.copyWith(
-                                                nome: objetoJsonRetorno['nome'],
-                                              );          
-                                            }
+                                          if (objetoJsonRetorno['nome'] != null) {
+                                            importaClienteController.text = objetoJsonRetorno['nome'];
+                                            contatoController.text = objetoJsonRetorno['nome'];
+                                            _reserva = _reserva!.copyWith(idCliente: objetoJsonRetorno['id']);
+                                            widget.reservaMontado!.cliente = widget.reservaMontado!.cliente!.copyWith(
+                                              nome: objetoJsonRetorno['nome'],
+                                            );          
                                           }
-                                        },
+                                                                                },
                                       ),
                                     ),
                                   ],

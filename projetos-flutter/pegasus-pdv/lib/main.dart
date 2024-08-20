@@ -9,7 +9,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:catcher/catcher.dart';
+import 'package:catcher_2/catcher_2.dart';
 
 import 'package:pegasus_pdv/src/infra/infra.dart';
 
@@ -40,7 +40,7 @@ void main() async {
 
   ///Inicia o Catcher e então inicia a aplicação. 
   ///O Catcher vai pegar e reportar os erros de forma global
-  Catcher(
+  Catcher2(
     runAppFunction: () {
       runApp(const MyApp());
     },
@@ -100,7 +100,7 @@ class MyAppState extends State<MyApp> {
 Widget _materialApp({bool? splash}) {
   return MaterialApp(
     scrollBehavior: MyCustomScrollBehavior(),
-    navigatorKey: Catcher.navigatorKey,
+    navigatorKey: Catcher2.navigatorKey,
     localizationsDelegates: const [
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,

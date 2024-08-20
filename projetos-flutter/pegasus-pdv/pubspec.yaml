@@ -16,68 +16,63 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  provider: any
-  intl: any
-  font_awesome_flutter: any
-  backdrop: any
-  http: any
+  provider: 6.1.2
+  intl: 0.19.0
+  font_awesome_flutter: 10.7.0
+  backdrop: 0.9.1
+  http: 1.2.2
   #flutter_masked_text: any
-  extended_masked_text: any
-  cpf_cnpj_validator: any
-  flutter_html: ^2.2.1
-  bottomreveal: any
-  flutter_barcode_scanner: any
-  flutter_bootstrap: any
+  extended_masked_text: 3.0.1
+  cpf_cnpj_validator: 2.0.0
+  flutter_html: ^3.0.0-beta.2
+  bottomreveal: 2.0.0
+  flutter_barcode_scanner: 2.0.0
+  flutter_bootstrap: 2.0.0
   #flutter_sparkline: any
-  printing: ^5.9.1
-  drift: ^1.7.0
-  sqlite3_flutter_libs: ^0.5.7
-  path_provider: ^2.0.11
-  path: any
-  awesome_dialog: any
-  image_picker: any
-  catcher: any
-  sentry_flutter: ^6.6.1
-  desktop_window: any
-  url_launcher: any
-  email_validator: any
-  flutter_dotenv: any
-  encrypt: any
-  bottom_navy_bar: any
-  flutter_spinbox: any
-  ini: any
-  custom_radio_grouped_button: any
-  csv: any
-  file_picker: any
-  crypto: any
-  share_plus: any
-  sparkline: any
-  platform_device_id: any
-  xml: any
+  printing: ^5.13.2
+  drift: ^2.20.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: 1.9.0
+  awesome_dialog: 3.2.1
+  image_picker: 1.1.2
+  # catcher: 0.8.0
+  sentry_flutter: ^8.7.0
+  desktop_window: 0.4.0
+  url_launcher: 6.3.0
+  email_validator: 3.0.0
+  flutter_dotenv: 5.1.0
+  encrypt: 5.0.3
+  bottom_navy_bar: 6.1.0
+  flutter_spinbox: 0.13.1
+  ini: 2.1.0
+  custom_radio_grouped_button: 2.2.1
+  csv: 6.0.0
+  file_picker: 8.1.2
+  crypto: 3.0.5
+  share_plus: 10.0.2
+  sparkline: 1.0.0
+  platform_device_id: 1.0.1
+  xml: 6.5.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-
-dependency_overrides:
-  catcher:
-    git:
-      url: https://github.com/ThexXTURBOXx/catcher.git
-
+  cupertino_icons: ^1.0.8
+  catcher_2: ^1.2.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  drift_dev: ^1.7.0
-  build_runner: any
-  msix: any
-  flutter_launcher_icons: any
+  drift_dev: ^2.20.1
+  build_runner: 2.4.12
+  msix: 3.16.8
+  flutter_launcher_icons: 0.13.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^4.0.0
 
 flutter_icons:
   android: true

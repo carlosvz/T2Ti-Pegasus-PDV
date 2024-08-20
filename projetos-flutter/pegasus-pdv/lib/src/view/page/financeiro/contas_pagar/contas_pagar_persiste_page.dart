@@ -201,16 +201,14 @@ class ContasPagarPersistePageState extends State<ContasPagarPersistePage> {
                                             ),
                                             fullscreenDialog: true,
                                           ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaFornecedorController.text = objetoJsonRetorno['nome'];
-                                          _contasPagar = _contasPagar!.copyWith(idFornecedor: objetoJsonRetorno['id']);
-                                          widget.contasPagarMontado!.fornecedor = widget.contasPagarMontado!.fornecedor!.copyWith(
-                                            nome: objetoJsonRetorno['nome'],
-                                          );          
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaFornecedorController.text = objetoJsonRetorno['nome'];
+                                        _contasPagar = _contasPagar!.copyWith(idFornecedor: objetoJsonRetorno['id']);
+                                        widget.contasPagarMontado!.fornecedor = widget.contasPagarMontado!.fornecedor!.copyWith(
+                                          nome: objetoJsonRetorno['nome'],
+                                        );          
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

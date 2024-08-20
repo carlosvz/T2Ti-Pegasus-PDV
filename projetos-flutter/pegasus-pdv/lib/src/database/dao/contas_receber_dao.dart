@@ -83,8 +83,8 @@ class ContasReceberDao extends DatabaseAccessor<AppDatabase> with _$ContasRecebe
       ]);
     
     if (mes != null && ano != null) {
-      consulta.where(contasRecebers.dataVencimento.month.equals(mes));
-      consulta.where(contasRecebers.dataVencimento.year.equals(ano));
+      consulta.where(contasRecebers.dataVencimento!.month.equals(mes));
+      consulta.where(contasRecebers.dataVencimento!.year.equals(ano));
     }
 
     if (status != null) {

@@ -76,8 +76,8 @@ class ContasPagarDao extends DatabaseAccessor<AppDatabase> with _$ContasPagarDao
       ]);
     
     if (mes != null && ano != null) {
-      consulta.where(contasPagars.dataVencimento.month.equals(mes));
-      consulta.where(contasPagars.dataVencimento.year.equals(ano));
+      consulta.where(contasPagars.dataVencimento!.month.equals(mes));
+      consulta.where(contasPagars.dataVencimento!.year.equals(ano));
     }
 
     if (status != null) {

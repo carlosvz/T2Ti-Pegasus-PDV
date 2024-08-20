@@ -8846,7 +8846,7 @@ class $ContasPagarsTable extends ContasPagars
   @override
   late final GeneratedColumn<double?> valorDesconto = GeneratedColumn<double?>(
       'VALOR_DESCONTO', aliasedName, true,
-      type: const RealType(), requiredDuringInsert: false);
+      type: const Real(), requiredDuringInsert: false);
   final VerificationMeta _valorPagoMeta = const VerificationMeta('valorPago');
   @override
   late final GeneratedColumn<double?> valorPago = GeneratedColumn<double?>(

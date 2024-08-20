@@ -201,16 +201,14 @@ class ContasReceberPersistePageState extends State<ContasReceberPersistePage> {
                                             ),
                                             fullscreenDialog: true,
                                           ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaClienteController.text = objetoJsonRetorno['nome'];
-                                          _contasReceber = _contasReceber!.copyWith(idCliente: objetoJsonRetorno['id']);
-                                          widget.contasReceberMontado!.cliente = widget.contasReceberMontado!.cliente!.copyWith(
-                                            nome: objetoJsonRetorno['nome'],
-                                          );          
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaClienteController.text = objetoJsonRetorno['nome'];
+                                        _contasReceber = _contasReceber!.copyWith(idCliente: objetoJsonRetorno['id']);
+                                        widget.contasReceberMontado!.cliente = widget.contasReceberMontado!.cliente!.copyWith(
+                                          nome: objetoJsonRetorno['nome'],
+                                        );          
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

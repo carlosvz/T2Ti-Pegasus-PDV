@@ -217,21 +217,19 @@ class CompraPedidoCabecalhoPersistePageState extends State<CompraPedidoCabecalho
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaColaboradorController.text = objetoJsonRetorno['nome'];
-                                          widget.compraPedidoCabecalhoMontado!.colaborador = 
-                                            Colaborador(
-                                              id: objetoJsonRetorno['id'],
-                                              nome: objetoJsonRetorno['nome']
-                                            );                                
-                                          CompraPedidoCabecalhoController.compraPedidoCabecalho = 
-                                            CompraPedidoCabecalhoController.compraPedidoCabecalho!.copyWith(
-                                              idColaborador: objetoJsonRetorno['id']
-                                            );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaColaboradorController.text = objetoJsonRetorno['nome'];
+                                        widget.compraPedidoCabecalhoMontado!.colaborador = 
+                                          Colaborador(
+                                            id: objetoJsonRetorno['id'],
+                                            nome: objetoJsonRetorno['nome']
+                                          );                                
+                                        CompraPedidoCabecalhoController.compraPedidoCabecalho = 
+                                          CompraPedidoCabecalhoController.compraPedidoCabecalho!.copyWith(
+                                            idColaborador: objetoJsonRetorno['id']
+                                          );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -289,22 +287,20 @@ class CompraPedidoCabecalhoPersistePageState extends State<CompraPedidoCabecalho
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          paginaMestreDetalheFoiAlterada = true;
-                                          importaFornecedorController.text = objetoJsonRetorno['nome'];
-                                          widget.compraPedidoCabecalhoMontado!.fornecedor = 
-                                            Fornecedor(
-                                              id: objetoJsonRetorno['id'],
-                                              nome: objetoJsonRetorno['nome']
-                                            );                                
-                                          CompraPedidoCabecalhoController.compraPedidoCabecalho = 
-                                            CompraPedidoCabecalhoController.compraPedidoCabecalho!.copyWith(
-                                              idFornecedor: objetoJsonRetorno['id']
-                                            );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        paginaMestreDetalheFoiAlterada = true;
+                                        importaFornecedorController.text = objetoJsonRetorno['nome'];
+                                        widget.compraPedidoCabecalhoMontado!.fornecedor = 
+                                          Fornecedor(
+                                            id: objetoJsonRetorno['id'],
+                                            nome: objetoJsonRetorno['nome']
+                                          );                                
+                                        CompraPedidoCabecalhoController.compraPedidoCabecalho = 
+                                          CompraPedidoCabecalhoController.compraPedidoCabecalho!.copyWith(
+                                            idFornecedor: objetoJsonRetorno['id']
+                                          );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

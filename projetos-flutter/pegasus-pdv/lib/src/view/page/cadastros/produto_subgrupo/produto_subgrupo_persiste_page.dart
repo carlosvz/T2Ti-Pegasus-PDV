@@ -184,19 +184,17 @@ class ProdutoSubgrupoPersistePageState extends State<ProdutoSubgrupoPersistePage
                                           ),
                                           fullscreenDialog: true,
                                         ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaProdutoGrupoController.text = objetoJsonRetorno['nome'];
-                                          widget.produtoSubgrupoMontado!.produtoSubgrupo = widget.produtoSubgrupoMontado!.produtoSubgrupo!.copyWith(
-                                            idProdutoGrupo: objetoJsonRetorno['id'],
-                                          );
-                                          widget.produtoSubgrupoMontado!.produtoGrupo = widget.produtoSubgrupoMontado!.produtoGrupo!.copyWith(
-                                            id: objetoJsonRetorno['id'],
-                                            nome: objetoJsonRetorno['nome'],
-                                          );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaProdutoGrupoController.text = objetoJsonRetorno['nome'];
+                                        widget.produtoSubgrupoMontado!.produtoSubgrupo = widget.produtoSubgrupoMontado!.produtoSubgrupo!.copyWith(
+                                          idProdutoGrupo: objetoJsonRetorno['id'],
+                                        );
+                                        widget.produtoSubgrupoMontado!.produtoGrupo = widget.produtoSubgrupoMontado!.produtoGrupo!.copyWith(
+                                          id: objetoJsonRetorno['id'],
+                                          nome: objetoJsonRetorno['nome'],
+                                        );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

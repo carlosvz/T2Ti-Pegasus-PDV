@@ -281,19 +281,17 @@ class IdentificaClientePageState extends State<IdentificaClientePage> {
                                       ),
                                       fullscreenDialog: true,
                                     ));
-                                if (objetoJsonRetorno != null) {
-                                  setState(() {
-                                    Sessao.vendaAtual = 
-                                    Sessao.vendaAtual!.copyWith(
-                                      idCliente: objetoJsonRetorno['id'],
-                                      nomeCliente: objetoJsonRetorno['nome'],
-                                      cpfCnpjCliente: objetoJsonRetorno['cpfCnpj'],
-                                    );
-                                    _importaClienteController.text = objetoJsonRetorno['nome'];
-                                    _cpfController.text = objetoJsonRetorno['cpfCnpj'] ?? '';                                    
-                                  });
-                                }
-                              },
+                                setState(() {
+                                  Sessao.vendaAtual = 
+                                  Sessao.vendaAtual!.copyWith(
+                                    idCliente: objetoJsonRetorno['id'],
+                                    nomeCliente: objetoJsonRetorno['nome'],
+                                    cpfCnpjCliente: objetoJsonRetorno['cpfCnpj'],
+                                  );
+                                  _importaClienteController.text = objetoJsonRetorno['nome'];
+                                  _cpfController.text = objetoJsonRetorno['cpfCnpj'] ?? '';                                    
+                                });
+                                                            },
                             ),
                           ),
                         ],

@@ -213,19 +213,17 @@ class DeliveryPersistePageState extends State<DeliveryPersistePage> {
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaTaxaEntregaController.text = objetoJsonRetorno['nome'];
-                                          _delivery = _delivery!.copyWith(
-                                            idTaxaEntrega: objetoJsonRetorno['id'],
-                                            valorFrete: objetoJsonRetorno['valor'],
-                                          );
-                                          // widget.deliveryMontado!.taxaEntrega = widget.deliveryMontado!.taxaEntrega!.copyWith(
-                                          //   nome: _objetoJsonRetorno['nome'],
-                                          // );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaTaxaEntregaController.text = objetoJsonRetorno['nome'];
+                                        _delivery = _delivery!.copyWith(
+                                          idTaxaEntrega: objetoJsonRetorno['id'],
+                                          valorFrete: objetoJsonRetorno['valor'],
+                                        );
+                                        // widget.deliveryMontado!.taxaEntrega = widget.deliveryMontado!.taxaEntrega!.copyWith(
+                                        //   nome: _objetoJsonRetorno['nome'],
+                                        // );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -284,18 +282,16 @@ class DeliveryPersistePageState extends State<DeliveryPersistePage> {
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaColaboradorController.text = objetoJsonRetorno['nome'];
-                                          _delivery = _delivery!.copyWith(
-                                            idColaborador: objetoJsonRetorno['id'],
-                                          );
-                                          // widget.deliveryMontado!.colaborador = widget.deliveryMontado!.colaborador!.copyWith(
-                                          //   nome: _objetoJsonRetorno['nome'],
-                                          // );
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaColaboradorController.text = objetoJsonRetorno['nome'];
+                                        _delivery = _delivery!.copyWith(
+                                          idColaborador: objetoJsonRetorno['id'],
+                                        );
+                                        // widget.deliveryMontado!.colaborador = widget.deliveryMontado!.colaborador!.copyWith(
+                                        //   nome: _objetoJsonRetorno['nome'],
+                                        // );
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

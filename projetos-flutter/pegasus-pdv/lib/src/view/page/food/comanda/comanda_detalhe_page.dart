@@ -756,10 +756,8 @@ class ComandaDetalhePageState extends State<ComandaDetalhePage> {
           ),
           fullscreenDialog: true,
         ));
-    if (objetoJsonRetorno != null) {
-      _localizarProduto(objetoJsonRetorno['gtin']);
-    }    
-  }  
+    _localizarProduto(objetoJsonRetorno['gtin']);
+    }  
 
   void _filtrarProdutoLookup(String campo, String valor) async {
     var listaFiltrada = await Sessao.db.produtoDao.consultarListaFiltro(campo, valor);
@@ -936,48 +934,45 @@ class ComandaDetalhePageState extends State<ComandaDetalhePage> {
             fullscreenDialog: true,
           )
         );
-      if (objetoJsonRetorno != null) {
+      _produtoMontado = await Sessao.db.produtoDao.consultarObjetoMontado(campo: 'GTIN', valor: objetoJsonRetorno['gtin']);   
 
-        _produtoMontado = await Sessao.db.produtoDao.consultarObjetoMontado(campo: 'GTIN', valor: objetoJsonRetorno['gtin']);   
-
-        if (_produtoMontado != null) {
-          // TODO: mover esse código e da CaixaPage para um local central, talvez ProdutoController
-          bool podeComporItemParaComanda = true;
-          if (Sessao.configuracaoPdv!.moduloFiscalPrincipal == 'NFC') {
-            // verifica se a tributação para o produto está OK antes mesmo de incluí-lo na comanda
-            final tributacao = await Sessao.db.tributConfiguraOfGtDao.consultarObjetoMontado(
-              Sessao.configuracaoPdv!.idTributOperacaoFiscalPadrao!, _produtoMontado!.tributGrupoTributario!.id!); 
-            if (tributacao == null) {
-              podeComporItemParaComanda = false;
-              if (!mounted) return;
-              gerarDialogBoxErro(context, 'Existe um problema com a tributação deste produto. Informe o Grupo Tributário para o Produto e vincule a Operação Fiscal para o mesmo na tela "Configura Tributação"');
-            } else {
-              podeComporItemParaComanda = true;
-            }
-          }
-          if (podeComporItemParaComanda) {
-            widget.comandaMontado.listaComandaDetalheMontado![index].listaComandaDetalheComplemento!.add(
-              ComandaDetalheComplemento(
-                id: null,
-                idProduto: _produtoMontado!.produto!.id,
-                nomeProduto: _produtoMontado!.produto!.nome,
-                quantidade: 1,
-                valorUnitario: _produtoMontado!.produto!.valorVenda,
-                valorTotal: _produtoMontado!.produto!.valorVenda,                
-              )
-            );
-            // atualiza o valor total dos complementos no item
-            widget.comandaMontado.listaComandaDetalheMontado![index].comandaDetalhe = 
-            widget.comandaMontado.listaComandaDetalheMontado![index].comandaDetalhe!.copyWith(
-              valorTotalComplemento: _atualizarValorComplemento(widget.comandaMontado.listaComandaDetalheMontado![index]),
-            );
-            setState(() {
-              _atualizarTotais();
-            });      
+      if (_produtoMontado != null) {
+        // TODO: mover esse código e da CaixaPage para um local central, talvez ProdutoController
+        bool podeComporItemParaComanda = true;
+        if (Sessao.configuracaoPdv!.moduloFiscalPrincipal == 'NFC') {
+          // verifica se a tributação para o produto está OK antes mesmo de incluí-lo na comanda
+          final tributacao = await Sessao.db.tributConfiguraOfGtDao.consultarObjetoMontado(
+            Sessao.configuracaoPdv!.idTributOperacaoFiscalPadrao!, _produtoMontado!.tributGrupoTributario!.id!); 
+          if (tributacao == null) {
+            podeComporItemParaComanda = false;
+            if (!mounted) return;
+            gerarDialogBoxErro(context, 'Existe um problema com a tributação deste produto. Informe o Grupo Tributário para o Produto e vincule a Operação Fiscal para o mesmo na tela "Configura Tributação"');
+          } else {
+            podeComporItemParaComanda = true;
           }
         }
-      }    
-    } else if (operacao == 'perguntas') {
+        if (podeComporItemParaComanda) {
+          widget.comandaMontado.listaComandaDetalheMontado![index].listaComandaDetalheComplemento!.add(
+            ComandaDetalheComplemento(
+              id: null,
+              idProduto: _produtoMontado!.produto!.id,
+              nomeProduto: _produtoMontado!.produto!.nome,
+              quantidade: 1,
+              valorUnitario: _produtoMontado!.produto!.valorVenda,
+              valorTotal: _produtoMontado!.produto!.valorVenda,                
+            )
+          );
+          // atualiza o valor total dos complementos no item
+          widget.comandaMontado.listaComandaDetalheMontado![index].comandaDetalhe = 
+          widget.comandaMontado.listaComandaDetalheMontado![index].comandaDetalhe!.copyWith(
+            valorTotalComplemento: _atualizarValorComplemento(widget.comandaMontado.listaComandaDetalheMontado![index]),
+          );
+          setState(() {
+            _atualizarTotais();
+          });      
+        }
+      }
+        } else if (operacao == 'perguntas') {
       if (widget.comandaMontado.listaComandaDetalheMontado![index].produtoMontado!.produto!.ippt == 'P') {
         await _tratarPerguntas(widget.comandaMontado.listaComandaDetalheMontado![index] );
       } else {

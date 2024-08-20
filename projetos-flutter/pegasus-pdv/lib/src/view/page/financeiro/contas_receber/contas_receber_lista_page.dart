@@ -425,7 +425,7 @@ class ContasReceberListaPageState extends State<ContasReceberListaPage> {
   }
 
   Future _refrescarTela() async {
-    _listaContasReceberMontado = await Sessao.db.contasReceberDao.consultarListaMontado(mes: _mesAno.month, ano: _mesAno.year, status: _statusRecebimento);
+    _listaContasReceberMontado = await Sessao.db.contasReceberDao.consultarListaMontado(mes: _mesAno!.month, ano: _mesAno!.year, status: _statusRecebimento);
     _atualizarTotais();
     setState(() {
     });

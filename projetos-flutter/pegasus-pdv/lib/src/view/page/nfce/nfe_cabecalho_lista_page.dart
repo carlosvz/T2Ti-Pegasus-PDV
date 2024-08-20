@@ -250,7 +250,7 @@ class NfeCabecalhoListaPageState extends State<NfeCabecalhoListaPage> {
       ObjetoNfe objetoNfe = ObjetoNfe(
         cnpj: Sessao.empresa!.cnpj!, 
         justificativa: 'OUTRA NOTA EMITIDA EM CONTINGENCIA OFFLINE. ESTA NOTA ORIGINAL FOI CANCELADA.', 
-        ano: nfceCabecalhoInicial.nfeCabecalho!.dataHoraEmissao!.year.toString(), 
+        ano: nfceCabecalhoInicial.nfeCabecalho!.dataHoraEmissao!!.year.toString(), 
         modelo: nfceCabecalhoInicial.nfeCabecalho!.codigoModelo!, 
         serie: nfceCabecalhoInicial.nfeCabecalho!.serie!, 
         numeroInicial: nfceCabecalhoInicial.nfeCabecalho!.numero!, 
@@ -335,7 +335,7 @@ class NfeCabecalhoListaPageState extends State<NfeCabecalhoListaPage> {
   //         socket: socket!, 
   //         cnpj: Sessao.empresa!.cnpj!, 
   //         justificativa: 'NOTA EMITIDA EM CONTINGENCIA OFFLINE', 
-  //         ano: nfceCabecalhoInicial.nfeCabecalho!.dataHoraEmissao!.year.toString(), 
+  //         ano: nfceCabecalhoInicial.nfeCabecalho!.dataHoraEmissao!!.year.toString(), 
   //         modelo: nfceCabecalhoInicial.nfeCabecalho!.codigoModelo!, 
   //         serie: nfceCabecalhoInicial.nfeCabecalho!.serie!, 
   //         numeroInicial: nfceCabecalhoInicial.nfeCabecalho!.numero!, 

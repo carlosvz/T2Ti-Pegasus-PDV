@@ -178,20 +178,18 @@ class TributConfiguraOfGtPersistePageState extends State<TributConfiguraOfGtPers
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['descricao'] != null) {
-                                          importaTributGrupoTributarioController.text = objetoJsonRetorno['descricao'];
-                                          widget.tributConfiguraOfGtMontado!.tributGrupoTributario = TributGrupoTributario(
-                                              id: objetoJsonRetorno['id'],
-                                              descricao: objetoJsonRetorno['descricao']
+                                      if (objetoJsonRetorno['descricao'] != null) {
+                                        importaTributGrupoTributarioController.text = objetoJsonRetorno['descricao'];
+                                        widget.tributConfiguraOfGtMontado!.tributGrupoTributario = TributGrupoTributario(
+                                            id: objetoJsonRetorno['id'],
+                                            descricao: objetoJsonRetorno['descricao']
+                                        );
+                                        widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt = 
+                                          widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt!.copyWith(
+                                            idTributGrupoTributario: objetoJsonRetorno['id'],
                                           );
-                                          widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt = 
-                                            widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt!.copyWith(
-                                              idTributGrupoTributario: objetoJsonRetorno['id'],
-                                            );
-                                        }
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],
@@ -248,20 +246,18 @@ class TributConfiguraOfGtPersistePageState extends State<TributConfiguraOfGtPers
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['descricao'] != null) {
-                                          importaTributOperacaoFiscalController.text = objetoJsonRetorno['descricao'];
-                                          widget.tributConfiguraOfGtMontado!.tributOperacaoFiscal = TributOperacaoFiscal(
-                                              id: objetoJsonRetorno['id'],
-                                              descricao: objetoJsonRetorno['descricao']
+                                      if (objetoJsonRetorno['descricao'] != null) {
+                                        importaTributOperacaoFiscalController.text = objetoJsonRetorno['descricao'];
+                                        widget.tributConfiguraOfGtMontado!.tributOperacaoFiscal = TributOperacaoFiscal(
+                                            id: objetoJsonRetorno['id'],
+                                            descricao: objetoJsonRetorno['descricao']
+                                        );
+                                        widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt = 
+                                          widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt!.copyWith(
+                                            idTributOperacaoFiscal: objetoJsonRetorno['id'],
                                           );
-                                          widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt = 
-                                            widget.tributConfiguraOfGtMontado!.tributConfiguraOfGt!.copyWith(
-                                              idTributOperacaoFiscal: objetoJsonRetorno['id'],
-                                            );
-                                        }
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

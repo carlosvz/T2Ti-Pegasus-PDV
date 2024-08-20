@@ -280,7 +280,7 @@ class MovimentoListaPageState extends State<MovimentoListaPage> {
   }
 
   Future _refrescarTela() async {
-    _listaMovimento = await Sessao.db.pdvMovimentoDao.consultarListaPeriodo(mes: _mesAno.month, ano: _mesAno.year);
+    _listaMovimento = await Sessao.db.pdvMovimentoDao.consultarListaPeriodo(mes: _mesAno!.month, ano: _mesAno!.year);
     setState(() {
     });
   }

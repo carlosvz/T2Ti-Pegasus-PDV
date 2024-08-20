@@ -172,16 +172,14 @@ class ComandaCadastroPageState extends State<ComandaCadastroPage> {
                           ),
                           fullscreenDialog: true,
                         ));
-                    if (objetoJsonRetorno != null) {
-                      if (objetoJsonRetorno['nome'] != null) {
-                        _importaClienteController.text = objetoJsonRetorno['nome'];
-                        widget.comandaMontado.comanda = widget.comandaMontado.comanda!.copyWith(idCliente: objetoJsonRetorno['id']);
-                        widget.comandaMontado.cliente = widget.comandaMontado.cliente!.copyWith(
-                          nome: objetoJsonRetorno['nome'],
-                        );          
-                      }
+                    if (objetoJsonRetorno['nome'] != null) {
+                      _importaClienteController.text = objetoJsonRetorno['nome'];
+                      widget.comandaMontado.comanda = widget.comandaMontado.comanda!.copyWith(idCliente: objetoJsonRetorno['id']);
+                      widget.comandaMontado.cliente = widget.comandaMontado.cliente!.copyWith(
+                        nome: objetoJsonRetorno['nome'],
+                      );          
                     }
-                  },
+                                    },
                 ),
               ),
             ],
@@ -249,16 +247,14 @@ class ComandaCadastroPageState extends State<ComandaCadastroPage> {
                           ),
                           fullscreenDialog: true,
                         ));
-                    if (objetoJsonRetorno != null) {
-                      if (objetoJsonRetorno['nome'] != null) {
-                        _importaColaboradorController.text = objetoJsonRetorno['nome'];
-                        widget.comandaMontado.comanda = widget.comandaMontado.comanda!.copyWith(idColaborador: objetoJsonRetorno['id']);
-                        widget.comandaMontado.colaborador = widget.comandaMontado.colaborador!.copyWith(
-                          nome: objetoJsonRetorno['nome'],
-                        );          
-                      }
+                    if (objetoJsonRetorno['nome'] != null) {
+                      _importaColaboradorController.text = objetoJsonRetorno['nome'];
+                      widget.comandaMontado.comanda = widget.comandaMontado.comanda!.copyWith(idColaborador: objetoJsonRetorno['id']);
+                      widget.comandaMontado.colaborador = widget.comandaMontado.colaborador!.copyWith(
+                        nome: objetoJsonRetorno['nome'],
+                      );          
                     }
-                  },
+                                    },
                 ),
               ),
             ],

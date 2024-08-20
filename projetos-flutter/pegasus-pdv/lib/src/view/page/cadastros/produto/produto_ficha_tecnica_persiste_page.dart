@@ -199,18 +199,16 @@ class ProdutoFichaTecnicaPersistePageState extends State<ProdutoFichaTecnicaPers
                                                 ),
                                                 fullscreenDialog: true,
                                               ));
-                                        if (objetoJsonRetorno != null) {
-                                          if (objetoJsonRetorno['nome'] != null) {
-                                            importaProdutoController.text = objetoJsonRetorno['nome'];
-                                           produtoFichaTecnica = produtoFichaTecnica!.copyWith
-                                                                (
-                                                                  idProduto: widget.produto!.id,
-                                                                  idProdutoFilho: objetoJsonRetorno['id'],
-                                                                  descricao: objetoJsonRetorno['nome'],
-                                                                );
-                                          }
+                                        if (objetoJsonRetorno['nome'] != null) {
+                                          importaProdutoController.text = objetoJsonRetorno['nome'];
+                                         produtoFichaTecnica = produtoFichaTecnica!.copyWith
+                                                              (
+                                                                idProduto: widget.produto!.id,
+                                                                idProdutoFilho: objetoJsonRetorno['id'],
+                                                                descricao: objetoJsonRetorno['nome'],
+                                                              );
                                         }
-                                      },
+                                                                            },
                                     ),
                                   ),
                                 ],

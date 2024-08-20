@@ -187,7 +187,7 @@ class NfceAcbrService {
       motivoRejeicao = NfceController.retornarMotivoRejeicao(_respostaServidor);
     }
     Sessao.fecharDialogBoxEspera(_context!);
-    gerarDialogBoxErro(_context, 'Ocorreu um problema ao tentar realizar o procedimento: ' + motivoRejeicao!);
+    gerarDialogBoxErro(_context, 'Ocorreu um problema ao tentar realizar o procedimento: ' + motivoRejeicao);
   }
 
   void _criarNota() {

@@ -375,7 +375,7 @@ class NfceInutilizaNumeroPageState extends State<NfceInutilizaNumeroPage> {
   //         socket: socket!, 
   //         cnpj: Sessao.empresa!.cnpj!, 
   //         justificativa: _justificativaController.text, 
-  //         ano: DateTime.now().year.toString(), 
+  //         ano: DateTime.now()!.year.toString(), 
   //         modelo: Sessao.numeroNfce!.modelo!, 
   //         serie: Sessao.numeroNfce!.serie!, 
   //         numeroInicial: _numeroInicialController.text, 
@@ -395,7 +395,7 @@ class NfceInutilizaNumeroPageState extends State<NfceInutilizaNumeroPage> {
       ObjetoNfe objetoNfe = ObjetoNfe(
         cnpj: Sessao.empresa!.cnpj!, 
         justificativa: _justificativaController.text, 
-        ano: DateTime.now().year.toString(), 
+        ano: DateTime.now()!.year.toString(), 
         modelo: Sessao.numeroNfce!.modelo!, 
         serie: Sessao.numeroNfce!.serie!, 
         numeroInicial: _numeroInicialController.text, 

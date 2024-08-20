@@ -80,8 +80,8 @@ class CompraPedidoCabecalhoDao extends DatabaseAccessor<AppDatabase> with _$Comp
       ]);
     
     if (mes != null && ano != null) {
-      consulta.where(compraPedidoCabecalhos.dataPedido.month.equals(mes));
-      consulta.where(compraPedidoCabecalhos.dataPedido.year.equals(ano));
+      consulta.where(compraPedidoCabecalhos.dataPedido.month!.equals(mes));
+      consulta.where(compraPedidoCabecalhos.dataPedido.year.equals(ano)!);
     }
 
     listaCompraPedidoCabecalhoMontado = await consulta.map((row) {

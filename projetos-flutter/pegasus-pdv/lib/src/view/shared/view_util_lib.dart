@@ -170,7 +170,7 @@ class DatePickerItem extends StatelessWidget {
   DatePickerItem({Key? key, DateTime? dateTime, required this.onChanged, this.firstDate, this.lastDate, this.mascara, this.readOnly})
       : date = dateTime == null
             ? null
-            : DateTime(dateTime.year, dateTime.month, dateTime.day),
+            : DateTime(dateTime!.year, dateTime!.month, dateTime.day),
         super(key: key);
 
   final DateTime? firstDate;
@@ -206,7 +206,7 @@ class DatePickerItem extends StatelessWidget {
                       lastDate: lastDate!,
                     ).then<void>((DateTime? value) {
                       if (value != null) {
-                        onChanged(DateTime(value.year, value.month, value.day));
+                        onChanged(DateTime(value!.year, value!.month, value.day));
                       }
                     });
                   }

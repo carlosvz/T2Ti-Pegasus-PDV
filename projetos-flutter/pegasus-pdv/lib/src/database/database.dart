@@ -11,7 +11,6 @@ import 'package:pegasus_pdv/src/database/migracao.dart';
 
 //import 'connection/connection.dart' as impl;
 
-import 'database_classes.dart';
 
 part 'database.g.dart';
 

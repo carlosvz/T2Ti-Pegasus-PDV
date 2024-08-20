@@ -400,16 +400,14 @@ class ConfiguracaoAbaGeralState extends State<ConfiguracaoAbaGeral> {
                                   ),
                                   fullscreenDialog: true,
                                 ));
-                          if (objetoJsonRetorno != null) {
-                            if (objetoJsonRetorno['descricao'] != null) {
-                              Sessao.configuracaoPdv = 
-                              Sessao.configuracaoPdv!.copyWith(
-                                idTributOperacaoFiscalPadrao: objetoJsonRetorno['id'],
-                              );                                
-                              await _refrescarTela();
-                            }
+                          if (objetoJsonRetorno!['descricao'] != null) {
+                            Sessao.configuracaoPdv = 
+                            Sessao.configuracaoPdv!.copyWith(
+                              idTributOperacaoFiscalPadrao: objetoJsonRetorno['id'],
+                            );                                
+                            await _refrescarTela();
                           }
-                        },
+                                                },
                       ),
                     ),
                   ],

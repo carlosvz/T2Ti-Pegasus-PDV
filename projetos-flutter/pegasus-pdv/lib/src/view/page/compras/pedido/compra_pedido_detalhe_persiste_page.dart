@@ -208,21 +208,19 @@ class CompraPedidoDetalhePersistePageState extends State<CompraPedidoDetalhePers
                                               ),
                                               fullscreenDialog: true,
                                             ));
-                                      if (objetoJsonRetorno != null) {
-                                        if (objetoJsonRetorno['nome'] != null) {
-                                          importaProdutoController.text = objetoJsonRetorno['nome'];
-                                          widget.compraDetalhe!.produto = Produto(id: objetoJsonRetorno['id'], nome: objetoJsonRetorno['nome']);
-                                          widget.compraDetalhe!.compraPedidoDetalhe = 
-                                            widget.compraDetalhe!.compraPedidoDetalhe!.copyWith
-                                            (
-                                              idProduto: objetoJsonRetorno['id'],
-                                              quantidade: 1,
-                                              valorUnitario: objetoJsonRetorno['valorCompra']?.toDouble() ?? objetoJsonRetorno['valorVenda']?.toDouble() ?? 1,
-                                            );
-                                          _atualizarTotais();
-                                        }
+                                      if (objetoJsonRetorno['nome'] != null) {
+                                        importaProdutoController.text = objetoJsonRetorno['nome'];
+                                        widget.compraDetalhe!.produto = Produto(id: objetoJsonRetorno['id'], nome: objetoJsonRetorno['nome']);
+                                        widget.compraDetalhe!.compraPedidoDetalhe = 
+                                          widget.compraDetalhe!.compraPedidoDetalhe!.copyWith
+                                          (
+                                            idProduto: objetoJsonRetorno['id'],
+                                            quantidade: 1,
+                                            valorUnitario: objetoJsonRetorno['valorCompra']?.toDouble() ?? objetoJsonRetorno['valorVenda']?.toDouble() ?? 1,
+                                          );
+                                        _atualizarTotais();
                                       }
-                                    },
+                                                                        },
                                   ),
                                 ),
                               ],

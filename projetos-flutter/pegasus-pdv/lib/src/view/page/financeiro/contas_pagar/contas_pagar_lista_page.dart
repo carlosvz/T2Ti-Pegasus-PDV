@@ -424,7 +424,7 @@ class ContasPagarListaPageState extends State<ContasPagarListaPage> {
   }
 
   Future _refrescarTela() async {
-    _listaContasPagarMontado = await Sessao.db.contasPagarDao.consultarListaMontado(mes: _mesAno.month, ano: _mesAno.year, status: _statusPagamento);
+    _listaContasPagarMontado = await Sessao.db.contasPagarDao.consultarListaMontado(mes: _mesAno!.month, ano: _mesAno!.year, status: _statusPagamento);
     _atualizarTotais();
     setState(() {
     });
